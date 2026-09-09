@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT301 Labs and Projects</title>
+    <link rel="stylesheet" href="p_style.css">
+    <title>Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>IT301 Labs and Projects</h1>
+    <header>
+        <h1 id="title">Practice Website</h1>
+        <nav>Home About Services Gallery Contact</nav>
+    </header>
+
+    <h2>Lists:</h2>
+
+    <p id="p1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <p id="p2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <h2>Labs:</h2>
+
+    <ul>
+        <li><a href="index.html">Lab 1: HTML Basics</a></li>
+        <li><a href="style with css.html">Lab 2: CSS Styling</a></li>
+        <li><a href="index.html">Lab 3: JavaScript Fundamentals</a></li>
+        
+    </ul>
+
+    <h2>Contact Form:</h2>
+
+    <form action="submit.php" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <br><br>
+
+        <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="general">General Inquiry</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+        </select>
+
+        <br><br>
+
+        <label for="message">Message:</label>
+        <br>
+
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
 </body>
 </html>
