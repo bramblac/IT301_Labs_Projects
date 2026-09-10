@@ -1,0 +1,66 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title {
+    margin: 0;
+    text-align: center;
+}
+
+nav {
+    font-size: 12px;
+    word-spacing: 15px;
+}
+
+body {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    background-color: rgb(163, 210, 228);
+}
+
+#p1, #p2 {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+#red {
+    color: red;
+}
+
+#green {
+    color: green;
+}
+
+#blue {
+    color: blue;
+}
+
+form {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px gray;
+    background-color: white;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    padding: 8px 20px;
+    cursor: pointer;
+}
