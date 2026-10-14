@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #button {
+            width: 150px;
+            height: 70px;
+            background-color: blue;
+            color: rgb(255, 254, 254);
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p id = 'button'>Click Me</p>
+    <script>
+        const button = document.getElementById('button');
+        button.addEventListener('click', function() {
+            button.style.backgroundColor = 'red';
+            button.textContent = 'Ouch! 🤕';
+        });
+        button.addEventListener('dblclick', function() {
+            button.style.backgroundColor = 'pink';
+            button.textContent = 'Double trouble!🤩';
+        });
+        button.addEventListener('mouseenter', function() {
+            button.style.backgroundColor = 'yellow';
+            button.style.color = 'black';
+            button.textContent = 'Do not click! 😠';
+        });
+        button.addEventListener('mouseleave', function() {
+            button.style.backgroundColor = 'lightgreen';
+            button.textContent = 'Phew! 😌';
+        });
+        button.addEventListener('mousemove', function() {
+            button.textContent = 'I see you! 👀';
+            button.style.backgroundColor = 'lightblue';
+        });
+    </script>
+</body>
+
+</html>
