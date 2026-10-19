@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <form action="#">
+        <label for="name">What is your name?</label>
+        <input type="text" id="name">
+
+        <button type="button" id="submit">Submit</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <form action="#">
+        <label for="number1">Number 1</label>
+        <input type="text" id="number1">
+        <br>
+        <br>
+        <label for="number2">Number 2</label>
+        <input type="text" id="number2"><br>
+        <button type="button" id="bttn1">enter</button>
+    </form>
+    <form action="#">
+        <p>Select Operation</p>
+        <input type="radio" name="operation" value="addition">Addition<br>
+        <input type="radio" name="operation" value="subtraction">Subtraction<br>
+        <input type="radio" name="operation" value="multiplication">Multiplication<br>
+        <input type="radio" name="operation" value="division">Division<br>
+
+        <button type="button" id="bttn2">Choose Operation</button>
+    </form>
+    
+
+
+    <p id="result"></p>
+    <p id="number1"></p>
+    <p id="number2"></p>
+
+    <script>
+        const name = document.getElementById('name');
+        const result = document.getElementById('result');
+        const operation = document.getElementById('operation');
+        const number1 = document.getElementById('number1');
+        const number2 = document.getElementById('number2');
+
+        document.getElementById('submit').addEventListener('click', function() {
+            result.textContent = `Hello, ${name.value}!`;
+        });
+        
+        document.getElementById('bttn2').addEventListener('click', function() {
+            result.textContent = `${operation}`;
+        });
+
+
+        const sub = function (a, b){return a - b;}
+        const add = function (a, b){return a + b;}
+        const multi = function (a, b){return a * b;}
+        const div = function (a, b){return a - b;}
+    </script>
+
+</body>
+</html>
