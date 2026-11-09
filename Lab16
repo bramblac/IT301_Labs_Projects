@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab16</title>
+        <style>
+            label {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+            }
+            #submit {
+                margin-top: 10px;
+            }
+           .correct {
+            color: green
+           }
+           .wrong { 
+            color: red
+           }
+        </style>
+    </head>
+    <body>
+    <form action = '#'>
+        <label for="name">name</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br>
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="Enter your email" required><br>
+        <label for="password">password</label>
+        <input type="password" id="password" placeholder="Enter your password" required><br>
+        <div  class="rules" id="password-rules">
+            <div id="rule-length" class="rule">✖ At least 6 characters</div>
+            <div id="rule-special" class="rule">✖ Must include a special character (!@#$...)</div>
+            <div id="rule-uppercase" class="rule">✖ Must include an uppercase letter (A-Z)</div>
+            </div>
+        <p id="error"></p>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+    <script>
+        const submit = document.getElementById('submit');
+        submit.addEventListener('click', function() {
+            const name = document.getElementById('name');
+            const password = document.getElementById('password');
+            const email = document.getElementById('email');
+            const error = document.getElementById('error');
+
+            if (name.value === "" || email.value === "" || password.value === "") {
+                error.textContent = "ALL FIELDS ARE REQUIRED!";
+            }
+        });
+        const password = document.getElementById('password');
+        password.addEventListener('input', function() {
+            const isCorrect = password.value.length >= 6
+            const error = document.getElementById('error')
+            error.classList.toggle('correct', isCorrect );
+            error.classList.toggle('wrong', !isCorrect);
+            error.textContent = isCorrect? 'PASSWORD WORKS!' : 'PASSWORD TOO SHORT!';
+        });
+
+    </script>
+
+
+    </body>
+</html>
